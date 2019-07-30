@@ -1,1 +1,1 @@
-# ViteJS-example
+# ViteJS-demo
