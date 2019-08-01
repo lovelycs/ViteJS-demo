@@ -1,7 +1,10 @@
 <template>
     <div>
         <div>Current Height: {{ height }}</div>
+        
         <div>Account Address: {{ address }}</div>
+
+        <div>Already start to auto receive tx</div>
 
         <div>Balance</div>
         <ul v-if="balance && balance.tokenBalanceInfoMap">
