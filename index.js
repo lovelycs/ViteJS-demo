@@ -18,7 +18,9 @@ const myMnemonicAccount = new hdAccount({
 
 const account = myMnemonicAccount.getAccount({ index: 0 });
 
+
 // 获取配额
+
 // account.getQuota({
 //     toAddress: account.address,
 //     tokenId: constant.Vite_TokenId, 
@@ -29,16 +31,21 @@ const account = myMnemonicAccount.getAccount({ index: 0 });
 //     console.warn(JSON.stringify(err));
 // });
 
+
 // 查看当前配额
+
 // account.getPledgeQuota().then(({ current, utps, quotaPerSnapshotBlock }) => {
 //     console.log(current, utps, quotaPerSnapshotBlock);
 // });
 
+
 // 开启自动接收交易
 // account.autoReceiveTx();
 
+
 // 停止自动接收交易
 // account.stopAutoReceiveTx();
+
 
 // 发送 1Vite 给自己，测试交易发送成功
 // sendTx({
@@ -71,6 +78,7 @@ const AccountList = [{
 }];
 
 BulkTransaction();
+
 
 
 
