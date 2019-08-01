@@ -1,0 +1,10 @@
+{
+    "name": "vitejs-demo",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/lovelycs/ViteJS-demo.git",
+    "dependencies": {
+        "@vite/vitejs": "^2.2.9",
+        "@vite/vitejs-http": "^2.2.9"
+    }
+}

@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+dist
+static
+.eslintcache
+.idea
+.vscode
+config.json
