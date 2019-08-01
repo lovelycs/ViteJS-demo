@@ -11,10 +11,15 @@ server.ledger.getSnapshotChainHeight().then((height) => {
     console.log(`Current Height: ${height}`);
 });
 
-const myMnemonicAccount = new hdAccount({
-    client: server,
-    mnemonic: mnemonic || null
-});
+let myMnemonicAccount = null;
+if (mnemonic) {
+    myMnemonicAccount = new hdAccount({
+        client: server,
+        mnemonic
+    });
+} else {
+    throw new Error('No mnemonic');
+}
 
 const account = myMnemonicAccount.getAccount({ index: 0 });
 

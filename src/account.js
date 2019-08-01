@@ -3,9 +3,14 @@ import { hdAccount } from '@vite/vitejs';
 import { mnemonic } from '../config.json';
 import server from './server.js';
 
-const myMnemonicAccount = new hdAccount({
-    client: server,
-    mnemonic: mnemonic || null
-});
+let myMnemonicAccount = null;
+if (mnemonic) {
+    myMnemonicAccount = new hdAccount({
+        client: server,
+        mnemonic
+    });
+} else {
+    throw new Error('No mnemonic');
+}
 
-export default myMnemonicAccount.getAccount({ index: 0 });
+export default myMnemonicAccount ? myMnemonicAccount.getAccount({ index: 0 }) : null;
